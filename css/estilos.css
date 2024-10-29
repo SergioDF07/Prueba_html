@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    /*define variables css para colores y tamañons de texto*/
+    --color_text-primary: #fff;
+    --color_text-secondary: #101E2C;
+    --color_text-tertiary: #155404;
+}
+
+body {
+    background-image: url(../imagenes/terrariaBackground.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+header{
+    width: 100%; /*ancho*/
+    height: 100px; /*alto*/
+    position: fixed; /*Esta propiedad permite que el elemento no se mueva al hacer scroll en la pagina*/
+    z-index: 100; /*Esta propiedad permite que el elemento se superponga a otros elementos en la pagina*/
+}
+
+.container_header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto; /*Sirve para centrar el elemento horizontalmente*/
+    display: flex; /*sirve para acomodar los elementos en filas o columnas*/
+    justify-content: space-between; /*sirve para distribuir los elementos dentro del contenedor*/
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    background-color: transparent; /*fondo transparente por defecto*/
+    transition: background-color 0.3s ease; /*suaviza el cambio de color de fondo*/
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-left: 70px;
+}
+
+.menu nav{
+    margin: 0px 20px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    margin: 20px 16px;
+}
+
+.menu nav ul li a{
+    color: #101E2C;
+    font-size: 16px;
+    position: relative;
+}
+
+.menu nav ul li a:hover{
+    color: #309C13;
+}
+
+.btn_quote {
+    /* Hace que el botón se muestre como un bloque */
+    display: block;
+
+    /* Define el relleno del botón: 8px arriba/abajo, 40px a los lados */
+    padding: 7px 25px;
+
+    /* Añade un borde sólido de 2px del color de texto primario */
+    border: 2px solid var(--color_text-primary);
+
+    /* Aplica bordes redondeados de 8px al botón */
+    border-radius: 8px;
+
+    /* Hace el texto más grueso */
+    font-weight: 500;
+
+    /* Aplica el color de texto terciario al texto del botón */
+    color: var(--color_text-tertiary);
+
+    /* Añade un margen lateral de 20px */
+    margin: 0px 20px;
+
+    /* Aplica una transición suave de 300ms a todas las propiedades */
+    transition: all 300ms;
+    
+}
+
+.btn_quote:hover {
+    /* Cambia el color del texto a blanco cuando se pasa el ratón */
+    color: lightcyan;
+
+    /* Cambia el fondo del botón al color primario */
+    background: #ffff;
+}
+
+.socialmedia{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.socialmedia img{
+    width: 95px;
+    padding: 20px;
+}
+
+.container_cover {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    background-color: #1CFC8A;
+}
+
+.cover {
+    /*lista el ancho maximo del contenedor*/
+    max-width: 1200px;
+
+    /*centrar horizontalmente el contenedor dentro de su padre*/
+    margin: auto;
+
+    /*añadir margen superior para separar del contenido del header*/
+    margin-top: 100px;
+
+    /*usa flexbox para alinear elementos hijos*/
+    display: flex;
+
+    align-items: center;
+
+    padding: 0px 20px;
+    background-color: #5BE384;
+
+    border-radius: 10px;
+}
+
+.text_cover {
+    width: 100%;
+
+    padding-right: 150px;
+}
+
+.text_cover h1 {
+    font-size: 38px;
+    color: #000;
+}
+
+.text_cover p {
+    font-size: 25px;
+
+    margin-top: 30px;
+
+    color: #000;
+}
+
+.text_cover a {
+    font-size: 20px;
+}
+
+.btn_text {
+    /*define que el boton se mostrara como un bloque ocupando todo el ancho*/
+    display: block;
+
+    /*fija un ancho de 150 pixeles para el boton*/
+    width: 150px;
+
+    margin-top: 40px;
+
+    padding: 10px 20px;
+
+    text-align: center;
+
+    /*aplica un peso de fuente de 500 para hacer el texto más grueso*/
+    font-weight: 500;
+
+    background: var(--color_text-tertiary);
+
+    border-radius: 8px;
+
+    color: #fff;
+
+    border: 2px solid transparent;
+
+    cursor: pointer;
+
+    transition: all 300ms;
+}
+
+.btn_text hover {
+    background: transparent;
+
+    border: 2px solid var(--color_text-primary);
+
+    color: var(--color_text-tertiary);
+}
+
+.image_cover {
+    max-width: 1200px;
+
+    margin: auto;
+    
+}
+
+.image_cover img {
+    width: 550px;
+}
+
+.container_card-primary {
+    padding: 100px;
+
+}
+
+.text_trust {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 20px;
+    
+}
+
+.card_trust {
+    margin: auto;
+    text-align: center;
+}
+
+.container_box-cardprimary {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    font-size: 13px;
+    
+}
+
+.container_box-cardprimary img {
+    max-width: 1200px;
+    margin: auto;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.box_card-primary {
+    max-width: 330px;
+    padding: 60px 40px;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    margin: 14px;
+    border-color: #000;
+    transition: all 300ms;
+}
+
+.edificio {
+    width: 252px;
+    border-radius: 5px;
+}
+.container_about {
+    /*lista el ancho maximo del contenedor*/
+    max-width: 1200px;
+
+    /*centrar horizontalmente el contenedor dentro de su padre*/
+    margin: auto;
+
+    /*añadir margen superior para separar del contenido del header*/
+    margin-top: 100px;
+
+    /*usa flexbox para alinear elementos hijos*/
+    display: flex;
+
+    align-items: center;
+
+    padding: 0px 20px;
+
+}
+.about {
+    width: 100%;
+
+    padding-right: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: lightblue;
+
+    border-radius: 10px;
+}
+
+.text_about {
+    font-size: 12px;
+
+    margin-left: 5px;
+}
+
+.image_about {
+    width: 100%;
+}
+
+.image_about img {
+    width: 550px;
+    size: 50px;
+    padding-bottom: 10px;
+}
+
+.formulary_cover {
+    /*lista el ancho maximo del contenedor*/
+    max-width: 1200px;
+
+    /*centrar horizontalmente el contenedor dentro de su padre*/
+    margin: auto;
+
+    /*añadir margen superior para separar del contenido del header*/
+    margin-top: 100px;
+
+    /*usa flexbox para alinear elementos hijos*/
+    display: flex;
+
+    align-items: center;
+
+    padding: 0px 20px;
+    background-color: #36E0AD;
+
+    border-radius: 10px;
+}
+
+.contact_form {
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_form form {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.map_container {
+    justify-content: center ;
+    align-items: center;
+    display: flex;
+    width: 100%; 
+    height: 100%;
+    
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente para el contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 40px auto; /* Centra el contenedor horizontalmente y agrega margen superior */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#userTable th, #userTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#userTable th {
+    background-color: rgba(240, 240, 240, 0.8); /* Fondo ligeramente gris para los encabezados */
+    font-weight: bold;
+}
+
+#userTable tr:hover {
+    background-color: rgba(220, 220, 220, 0.6); /* Color de fondo al pasar el ratón sobre la fila */
+}
+
+#userTable td {
+  color: #333;
+}
+
+.imagen_formulario {
+    padding-right: 15px;
+}
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center; /* Centra el texto en el pie de página */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Espacia logos y ESRB */
+    align-items: center; /* Alinea verticalmente */
+    margin-bottom: 20px; /* Espacio entre el contenido y las columnas */
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra verticalmente las imágenes */
+    gap: 20px;
+}
+
+.footer-images img {
+    max-width: 100px; /* Ajusta el tamaño de las imágenes de Mojang y Xbox */
+}
+
+.footer-images-right {
+    display: flex; /* Asegura que la imagen de ESRB esté centrada verticalmente */
+    justify-content: center; /* Centra horizontalmente la imagen de ESRB */
+}
+
+.footer-images-right img {
+    max-width: 80px; /* Ajusta el tamaño de la imagen de ESRB */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.footer-info {
+    flex-direction: column;
+    align-items: center; /* Centra el texto debajo de los logos */
+    margin-top: 10px; /* Espacio entre imágenes y texto de copyright */
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se ajusten */
+    justify-content: center; /* Centra las columnas */
+    margin-top: 10px; /* Espacio entre la sección de logos y las columnas */
+}
+
+.footer-columns div {
+    margin: 0 20px; /* Espacio entre las columnas */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.footer-columns ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px; /* Espacio entre el título y la lista */
+}
+
+.footer-columns h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-columns li {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.green-link {
+    color: #00ff00; /* En verde */
+    text-decoration: none;
+}
+
+.green-link:hover {
+    text-decoration: underline;
+}
+
+.white-text {
+    color: white; /* Color blanco para ciertos textos */
+}
+
+
+/*Proyectos*/
+
+.container__proyect {
+    padding: 100px 0px;
+    background: rgba(220, 220, 220, 0.6);
+    margin-top: 100px;
+}
+
+.container__card-proyect {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card__proyect {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #fff;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    background-clip: border-box; /* Asegúrate de que el fondo de la tarjeta no se recorte */
+}
+
+.card-text { 
+    color: rgba(255, 255, 255, 0.8); /* Color blanco grisáceo */
+}
+
+.card__proyect h2, .card__proyect p {
+    margin: 0;
+    position: relative; /* Para que el texto esté en el flujo normal */
+    z-index: 1; /* Asegúrate de que el texto esté por encima de la imagen de fondo */
+}
+
+.card__proyect:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease; 
+}
+
+/* Ajustar el margen para el texto superior */
+.text__service {
+    margin-bottom: 30px; /* Ajusta este valor según sea necesario para subir el texto */
+}
+
+/* Espacio adicional superior */
+.team-section {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: rgba(220, 220, 220, 0.6); /* Fondo transparente */
+    padding: 40px 0; /* Separación superior e inferior */
+    margin-top: 30px; /* Espacio entre la sección anterior y esta */
+}
+
+.team-section h2 {
+    color: lightblue;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas de miembros del equipo */
+.team-member {
+    background-color: rgba(216, 238, 191, 0.9); /* Fondo más opaco */
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.team-member h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: black;
+}
+
+/* Efecto de hover para que la tarjeta sobresalga */
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
